@@ -10,7 +10,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        ZStack {
+            Color(#colorLiteral(red: 0.9978883862, green: 0.8312121034, blue: 0.224271208, alpha: 1)).edgesIgnoringSafeArea(.all)
+            
+            VStack(alignment: .leading) {
+                TopView()
+                
+                RecentConnectionsView()
+                
+                MainView()
+                
+                DownloadAndUploadView()
+                
+                Spacer()
+            }
+        }
     }
 }
 
